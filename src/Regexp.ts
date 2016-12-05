@@ -118,7 +118,9 @@ export const SplitterPatterns = [
   // Thu, 26 Jun 2014 14:00:51 +0400 Bob <bob@example.com>:
   new RegExp("\\S{3,10}, \\d\\d? \\S{3,10} 20\\d\\d,? \\d\\d?:\\d\\d(:\\d\\d)?( \\S+){3,6}@\\S+:"),
   // Sent from Samsung MobileName <address@example.com> wrote:
-  new RegExp("Sent from Samsung .{0,100}@.{0,100}> wrote")
+  new RegExp("Sent from Samsung .{0,100}@.{0,100}> wrote"),
+  new RegExp("Sent from my iPhone"),
+  new RegExp("Envoyé de mon iPhone")   
 ];
 
 export const Link = new RegExp("<(http://[^>]*)>");

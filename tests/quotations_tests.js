@@ -422,7 +422,7 @@ describe("Quotations", function () {
         "Tarmo Lehtpuu has posted the following message on"
       ];
 
-      assert.equal("tettessset", quotations.markMessageLines(lines));
+      assert.equal("tetsessset", quotations.markMessageLines(lines));
     });
   });
 
