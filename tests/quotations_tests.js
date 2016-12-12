@@ -200,6 +200,27 @@ describe("Quotations", function () {
       assert.equal("Replying ok", quotations.extractFromPlain(messageBody).body);
     });
 
+    it("should detect \"From\" with \"Date\" instead of \"Sent\" block in English.", function () {
+      const messageBody = "Allo! Follow up MIME!\n\n" +
+        "From: somebody@example.com\n" +
+        "Date:March-19-11 5:42 PM\n" +
+        "To: Somebody\n" +
+        "Subject: The manager has commented on your Loop\n\n" +
+        "Blah-blah-blah\n";
+      assert.equal("Allo! Follow up MIME!", quotations.extractFromPlain(messageBody).body);
+    });
+    
+    it("should detect \"From\" block in English. no spc", function () {
+      const messageBody = "Allo! Follow up MIME!\n\n" +
+        "From:somebody@example.com\n" +
+        "Sent:March-19-11 5:42 PM\n" +
+        "To:Somebody\n" +
+        "Subject:The manager has commented on your Loop\n\n" +
+        "Blah-blah-blah\n";
+
+      assert.equal("Allo! Follow up MIME!", quotations.extractFromPlain(messageBody).body);
+    });
+
     it("should detect \"From\" block in English.", function () {
       const messageBody = "Allo! Follow up MIME!\n\n" +
         "From: somebody@example.com\n" +

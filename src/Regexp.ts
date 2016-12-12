@@ -101,7 +101,7 @@ export const FromColonOrDateColon = new RegExp(
       "From", "Van", "De", "Von", "Fra", "Från",      // "From" in different languages.
       "Date", "Datum", "Envoyé", "Skickat", "Sendt",  // "Date" in different languages.
     ].join("|")
-  })[\\s]?:[*]? .*`, "i"
+  })[\\s]?:[*]?.*`, "i"
 );
 
 export const SplitterPatterns = [
