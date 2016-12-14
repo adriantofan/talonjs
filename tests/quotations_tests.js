@@ -110,7 +110,11 @@ describe("Quotations", function () {
     it("should detect pattern \"original message\" in Danish.", function () {
       checkPatternOriginalMessage("Oprindelig meddelelse");
     });
-
+    
+    it("should detect pattern \"original message\" in French.", function () {
+      checkPatternOriginalMessage("Message d'origine");
+    });
+    
     it("should detect message after quote.", function () {
       const messageBody = "On 04/19/2011 07:10 AM, Roman Tkachenko wrote:\n\n" +
         ">\n> Test\nTest reply";

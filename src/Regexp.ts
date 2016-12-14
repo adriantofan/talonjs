@@ -90,7 +90,8 @@ export const OriginalMessage = new RegExp(
     [
       "Original Message", "Reply Message",            // English
       "Ursprüngliche Nachricht", "Antwort Nachricht", // German
-      "Oprindelig meddelelse"                         // Danish
+      "Oprindelig meddelelse",                        // Danish
+      "Message d'origine"                             // French
     ].join("|")
   })[ ]{0,100}[-]+`, "i"
 );
